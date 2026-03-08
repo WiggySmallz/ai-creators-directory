@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Tool, Category } from "@/types";
 import { PricingBadge } from "./PricingBadge";
 import { SkillBadge } from "./SkillBadge";
@@ -18,8 +19,8 @@ export function ToolCard({ tool, category }: ToolCardProps) {
         <span className="absolute top-3 right-3 text-[10px] text-zinc-500 uppercase tracking-wider">Sponsored</span>
       )}
       <div className="flex items-start gap-4 mb-3">
-        <div className="w-12 h-12 rounded-lg bg-zinc-800 flex items-center justify-center text-lg font-bold text-purple-400 shrink-0">
-          {tool.name.charAt(0)}
+        <div className="w-12 h-12 rounded-lg bg-zinc-800 flex items-center justify-center shrink-0 overflow-hidden">
+          <Image src={tool.logo} alt={`${tool.name} logo`} width={48} height={48} className="object-contain" />
         </div>
         <div className="min-w-0">
           <Link href={`/tools/${tool.slug}`} className="font-semibold text-white hover:text-purple-400 transition-colors block truncate">

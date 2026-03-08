@@ -6,6 +6,7 @@ import { SkillBadge } from "@/components/SkillBadge";
 import { CategoryBadge } from "@/components/CategoryBadge";
 import { DealBadge } from "@/components/DealBadge";
 import { ExternalLink, Star, ArrowLeft } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -46,8 +47,8 @@ export default async function ToolPage({ params }: PageProps) {
 
       <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-8 mb-8">
         <div className="flex items-start gap-6 mb-6">
-          <div className="w-16 h-16 rounded-xl bg-zinc-800 flex items-center justify-center text-2xl font-bold text-purple-400 shrink-0">
-            {tool.name.charAt(0)}
+          <div className="w-16 h-16 rounded-xl bg-zinc-800 flex items-center justify-center shrink-0 overflow-hidden">
+            <Image src={tool.logo} alt={`${tool.name} logo`} width={64} height={64} className="object-contain" />
           </div>
           <div>
             <h1 className="text-3xl font-bold text-white mb-2">{tool.name}</h1>
