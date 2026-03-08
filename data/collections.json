@@ -3,12 +3,24 @@
     "slug": "best-free-ai-tools",
     "title": "Best Free AI Tools for Creators",
     "description": "Top AI tools with generous free tiers — no credit card required to get started.",
-    "toolSlugs": ["runway-ml", "elevenlabs", "framer"]
+    "toolSlugs": ["canva-ai", "capcut", "chatgpt", "framer", "grammarly", "buffer-ai"]
   },
   {
     "slug": "starter-kit-video-creators",
     "title": "AI Starter Kit for Video Creators",
     "description": "Everything you need to start creating AI-enhanced video content.",
-    "toolSlugs": ["runway-ml", "elevenlabs", "midjourney"]
+    "toolSlugs": ["runway-ml", "pika", "capcut", "opus-clip", "elevenlabs"]
+  },
+  {
+    "slug": "ai-design-toolkit",
+    "title": "AI Design Toolkit",
+    "description": "The best AI tools for graphic designers, UI designers, and brand creators.",
+    "toolSlugs": ["midjourney", "canva-ai", "figma-ai", "framer", "looka", "adobe-firefly"]
+  },
+  {
+    "slug": "content-writing-essentials",
+    "title": "Content Writing Essentials",
+    "description": "AI tools to help you write better content, faster.",
+    "toolSlugs": ["chatgpt", "jasper-ai", "copy-ai", "grammarly", "surfer-seo"]
   }
 ]
