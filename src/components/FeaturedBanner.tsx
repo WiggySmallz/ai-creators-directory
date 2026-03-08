@@ -9,9 +9,12 @@ interface FeaturedBannerProps {
 export function FeaturedBanner({ tools, categories }: FeaturedBannerProps) {
   if (tools.length === 0) return null;
   return (
-    <section className="py-16 px-4 bg-zinc-900/50">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl font-bold text-white mb-8 text-center">Featured Tools</h2>
+    <section className="py-20 px-6 lg:px-8 border-b border-rule">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-baseline justify-between mb-10">
+          <h2 className="font-serif text-3xl text-ink">Editor&apos;s picks</h2>
+          <p className="text-sm text-ink-faint">Hand-selected by our team</p>
+        </div>
         <ToolGrid tools={tools} categories={categories} />
       </div>
     </section>

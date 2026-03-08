@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const category = getCategoryBySlug(slug);
   if (!category) return { title: "Category Not Found" };
   return {
-    title: `${category.name} AI Tools — AI for Creators`,
+    title: `${category.name} — AI for Creators`,
     description: `Discover the best AI tools for ${category.name.toLowerCase()}.`,
   };
 }
@@ -35,16 +35,16 @@ export default async function CategoryPage({ params }: PageProps) {
   const regular = tools.filter((t) => !t.sponsored);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <Link href="/tools" className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-8">
-        <ArrowLeft size={16} /> Back to all tools
+    <div className="max-w-6xl mx-auto px-6 lg:px-8 py-16">
+      <Link href="/tools" className="inline-flex items-center gap-2 text-sm text-ink-muted hover:text-ink transition-colors mb-10">
+        <ArrowLeft size={14} /> Back to directory
       </Link>
 
-      <div className="flex items-center gap-4 mb-8">
-        <LucideIcon name={category.icon} size={36} className="text-purple-400" />
+      <div className="flex items-center gap-4 mb-10">
+        <LucideIcon name={category.icon} size={28} strokeWidth={1.5} className="text-vermillion" />
         <div>
-          <h1 className="text-3xl font-bold text-white">{category.name}</h1>
-          <p className="text-zinc-400">{tools.length} tool{tools.length !== 1 ? "s" : ""}</p>
+          <h1 className="font-serif text-4xl text-ink">{category.name}</h1>
+          <p className="text-ink-muted">{tools.length} tool{tools.length !== 1 ? "s" : ""}</p>
         </div>
       </div>
 

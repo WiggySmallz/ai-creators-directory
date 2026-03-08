@@ -1,30 +1,27 @@
-import { Sparkles } from "lucide-react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export function Hero({ toolCount }: { toolCount: number }) {
   return (
-    <section className="py-20 px-4 text-center">
-      <div className="max-w-3xl mx-auto">
-        <div className="flex justify-center mb-6">
-          <span className="inline-flex items-center gap-2 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-full px-4 py-1.5 text-sm font-medium">
-            <Sparkles size={16} />
-            {toolCount}+ AI Tools Curated
-          </span>
-        </div>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-          Discover the Best AI Tools for{" "}
-          <span className="text-purple-400">Content Creators</span>
+    <section className="relative noise-bg overflow-hidden">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 pt-24 pb-20 md:pt-32 md:pb-28">
+        <p className="text-xs uppercase tracking-[0.2em] text-ink-muted mb-6">{toolCount} tools curated</p>
+        <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-ink leading-[1.05] mb-8 max-w-4xl">
+          The best AI tools<br />
+          for <em className="text-vermillion">content creators</em>
         </h1>
-        <p className="text-lg text-zinc-400 mb-8 max-w-2xl mx-auto">
-          A curated directory of AI-powered tools for video editors, designers, writers, and creators. Find the perfect tools to supercharge your workflow.
+        <p className="text-lg text-ink-light max-w-xl mb-10 leading-relaxed">
+          A curated catalog of AI-powered tools for video editors, designers, writers, and creators who care about their craft.
         </p>
         <Link
           href="/tools"
-          className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-colors text-lg"
+          className="group inline-flex items-center gap-3 bg-ink text-cream px-7 py-3.5 text-sm font-medium tracking-wide hover:bg-ink-light transition-colors"
         >
-          Browse All Tools
+          Browse the directory
+          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
         </Link>
       </div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-rule" />
     </section>
   );
 }

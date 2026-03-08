@@ -32,13 +32,16 @@ export default async function CollectionPage({ params }: PageProps) {
   const categories = getCategories();
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <Link href="/collections" className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-8">
-        <ArrowLeft size={16} /> Back to collections
+    <div className="max-w-6xl mx-auto px-6 lg:px-8 py-16">
+      <Link href="/collections" className="inline-flex items-center gap-2 text-sm text-ink-muted hover:text-ink transition-colors mb-10">
+        <ArrowLeft size={14} /> Back to collections
       </Link>
 
-      <h1 className="text-3xl font-bold text-white mb-2">{collection.title}</h1>
-      <p className="text-zinc-400 mb-8">{collection.description}</p>
+      <div className="mb-10">
+        <p className="text-xs uppercase tracking-[0.2em] text-ink-muted mb-3">{tools.length} tools</p>
+        <h1 className="font-serif text-4xl text-ink mb-3">{collection.title}</h1>
+        <p className="text-ink-light">{collection.description}</p>
+      </div>
 
       <ToolGrid tools={tools} categories={categories} />
     </div>

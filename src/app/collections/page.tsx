@@ -1,10 +1,10 @@
 import { getCollections } from "@/lib/data";
 import Link from "next/link";
-import { ArrowRight, BookOpen } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Curated Collections — AI for Creators",
+  title: "Collections — AI for Creators",
   description: "Hand-picked collections of AI tools for specific creator workflows.",
 };
 
@@ -12,22 +12,25 @@ export default function CollectionsPage() {
   const collections = getCollections();
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-3xl font-bold text-white mb-2">Curated Collections</h1>
-      <p className="text-zinc-400 mb-8">Hand-picked AI tool bundles for specific creator workflows.</p>
+    <div className="max-w-6xl mx-auto px-6 lg:px-8 py-16">
+      <div className="mb-10">
+        <p className="text-xs uppercase tracking-[0.2em] text-ink-muted mb-3">Collections</p>
+        <h1 className="font-serif text-4xl text-ink mb-3">Curated toolkits</h1>
+        <p className="text-ink-light">Hand-picked AI tool bundles for specific creator workflows.</p>
+      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-rule border border-rule">
         {collections.map((col) => (
           <Link
             key={col.slug}
             href={`/collections/${col.slug}`}
-            className="group bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-purple-500/50 transition-all"
+            className="group bg-cream p-8 hover:bg-cream-dark transition-colors"
           >
-            <BookOpen size={24} className="text-purple-400 mb-4" />
-            <h2 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">{col.title}</h2>
-            <p className="text-sm text-zinc-400 mb-4">{col.description}</p>
-            <span className="flex items-center gap-1 text-sm text-purple-400">
-              {col.toolSlugs.length} tools <ArrowRight size={14} />
+            <p className="text-xs text-ink-faint mb-3">{col.toolSlugs.length} tools</p>
+            <h2 className="font-serif text-2xl text-ink mb-2 group-hover:text-vermillion transition-colors">{col.title}</h2>
+            <p className="text-sm text-ink-muted mb-6 leading-relaxed">{col.description}</p>
+            <span className="inline-flex items-center gap-1 text-sm text-vermillion font-medium">
+              Explore <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </span>
           </Link>
         ))}

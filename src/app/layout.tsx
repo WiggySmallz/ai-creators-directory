@@ -1,17 +1,25 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { DM_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
-  title: "AI for Creators — Curated AI Tools Directory",
-  description: "Discover the best AI tools for content creators, designers, and video editors. Curated directory with reviews, deals, and recommendations.",
+  title: "AI for Creators — A Curated Directory",
+  description: "A hand-picked collection of the finest AI tools for content creators, designers, and video editors.",
 };
 
 export default function RootLayout({
@@ -20,9 +28,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body
-        className={`${geistSans.variable} font-sans bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 min-h-screen flex flex-col antialiased`}
+        className={`${dmSans.variable} ${instrumentSerif.variable} font-sans min-h-screen flex flex-col antialiased`}
       >
         <Header />
         <main className="flex-1">{children}</main>

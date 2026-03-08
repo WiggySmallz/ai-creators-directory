@@ -3,7 +3,7 @@ import { CategoryGrid } from "@/components/CategoryGrid";
 import { FeaturedBanner } from "@/components/FeaturedBanner";
 import { ToolGrid } from "@/components/ToolGrid";
 import { getTools, getCategories, getFeaturedTools, getLatestTools, getDeals } from "@/lib/data";
-import { Tag } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function HomePage() {
@@ -19,27 +19,35 @@ export default function HomePage() {
       <FeaturedBanner tools={featured} categories={categories} />
       <CategoryGrid categories={categories} />
 
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl font-bold text-white mb-8 text-center">Latest Additions</h2>
+      <section className="py-20 px-6 lg:px-8 border-t border-rule">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-baseline justify-between mb-10">
+            <h2 className="font-serif text-3xl text-ink">Recently added</h2>
+            <Link href="/tools" className="text-sm text-ink-muted hover:text-vermillion editorial-link transition-colors flex items-center gap-1">
+              View all <ArrowRight size={14} />
+            </Link>
+          </div>
           <ToolGrid tools={latest} categories={categories} />
         </div>
       </section>
 
       {deals.length > 0 && (
-        <section className="py-16 px-4 bg-zinc-900/50">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="flex justify-center mb-4">
-              <Tag size={32} className="text-purple-400" />
+        <section className="py-20 px-6 lg:px-8 border-t border-rule bg-vermillion-light relative noise-bg overflow-hidden">
+          <div className="relative z-10 max-w-6xl mx-auto">
+            <div className="max-w-lg">
+              <p className="text-xs uppercase tracking-[0.2em] text-vermillion mb-4">Limited offers</p>
+              <h2 className="font-serif text-3xl text-ink mb-4">Deals &amp; discounts</h2>
+              <p className="text-ink-light mb-8 leading-relaxed">
+                Save on the best AI tools with exclusive offers and time-limited discounts.
+              </p>
+              <Link
+                href="/deals"
+                className="group inline-flex items-center gap-3 bg-vermillion text-white px-7 py-3 text-sm font-medium tracking-wide hover:bg-vermillion-dark transition-colors"
+              >
+                View all deals
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
-            <h2 className="text-2xl font-bold text-white mb-3">Active Deals</h2>
-            <p className="text-zinc-400 mb-6">Save on the best AI tools for creators</p>
-            <Link
-              href="/deals"
-              className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white px-6 py-2.5 rounded-lg font-medium transition-colors"
-            >
-              View All Deals
-            </Link>
           </div>
         </section>
       )}
