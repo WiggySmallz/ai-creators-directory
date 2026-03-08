@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "best-free-ai-tools",
+    "title": "Best Free AI Tools for Creators",
+    "description": "Top AI tools with generous free tiers — no credit card required to get started.",
+    "toolSlugs": ["runway-ml", "elevenlabs", "framer"]
+  },
+  {
+    "slug": "starter-kit-video-creators",
+    "title": "AI Starter Kit for Video Creators",
+    "description": "Everything you need to start creating AI-enhanced video content.",
+    "toolSlugs": ["runway-ml", "elevenlabs", "midjourney"]
+  }
+]

@@ -1,0 +1,9 @@
+[
+  { "slug": "video", "name": "Video Editing & Generation", "icon": "Video" },
+  { "slug": "image", "name": "Image Generation & Editing", "icon": "Image" },
+  { "slug": "writing", "name": "Writing & Copywriting", "icon": "Pen" },
+  { "slug": "audio", "name": "Audio & Music", "icon": "Headphones" },
+  { "slug": "design", "name": "Design & UI", "icon": "Palette" },
+  { "slug": "social", "name": "Social Media Management", "icon": "Share2" },
+  { "slug": "seo", "name": "SEO & Marketing", "icon": "TrendingUp" }
+]
