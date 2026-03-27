@@ -3,24 +3,36 @@
     "slug": "best-free-ai-tools",
     "title": "Best Free AI Tools for Creators",
     "description": "Top AI tools with generous free tiers — no credit card required to get started.",
-    "toolSlugs": ["canva-ai", "capcut", "chatgpt", "framer", "grammarly", "buffer-ai"]
+    "toolSlugs": ["canva-ai", "capcut", "chatgpt", "claude-ai", "framer", "grammarly", "ideogram", "remove-bg"]
   },
   {
     "slug": "starter-kit-video-creators",
     "title": "AI Starter Kit for Video Creators",
     "description": "Everything you need to start creating AI-enhanced video content.",
-    "toolSlugs": ["runway-ml", "pika", "capcut", "opus-clip", "elevenlabs"]
+    "toolSlugs": ["runway-ml", "higgsfield-ai", "luma-dream-machine", "capcut", "opus-clip", "elevenlabs"]
   },
   {
     "slug": "ai-design-toolkit",
     "title": "AI Design Toolkit",
     "description": "The best AI tools for graphic designers, UI designers, and brand creators.",
-    "toolSlugs": ["midjourney", "canva-ai", "figma-ai", "framer", "looka", "adobe-firefly"]
+    "toolSlugs": ["midjourney", "canva-ai", "ideogram", "figma-ai", "framer", "looka", "remove-bg", "photoroom"]
   },
   {
     "slug": "content-writing-essentials",
     "title": "Content Writing Essentials",
     "description": "AI tools to help you write better content, faster.",
-    "toolSlugs": ["chatgpt", "jasper-ai", "copy-ai", "grammarly", "surfer-seo"]
+    "toolSlugs": ["claude-ai", "chatgpt", "jasper-ai", "grammarly", "perplexity", "notion-ai", "surfer-seo"]
+  },
+  {
+    "slug": "ai-video-generation",
+    "title": "AI Video Generation Powerhouse",
+    "description": "The most capable AI video generators for cinematic, realistic, and creative content.",
+    "toolSlugs": ["runway-ml", "higgsfield-ai", "luma-dream-machine", "kling-ai", "pika", "heygen", "synthesia"]
+  },
+  {
+    "slug": "youtube-creator-toolkit",
+    "title": "YouTube Creator Toolkit",
+    "description": "Everything a YouTuber needs — from scripting to editing to repurposing.",
+    "toolSlugs": ["tubegen-ai", "opus-clip", "capcut", "elevenlabs", "pictory", "invideo-ai", "chatgpt"]
   }
 ]
